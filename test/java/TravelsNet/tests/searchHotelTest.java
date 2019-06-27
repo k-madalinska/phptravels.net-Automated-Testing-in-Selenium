@@ -9,7 +9,7 @@ public class searchHotelTest extends TestOnChrome {
 
     @Test
     //methods test
-    public void  searchHotelTest() {
+    public void  searchHotelTest() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 //        driver.get("https://www.phptravels.net/");
 

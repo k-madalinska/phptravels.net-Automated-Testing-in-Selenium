@@ -1,5 +1,6 @@
 package TravelsNet.PageObject;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,9 +26,13 @@ public class HomePage {
 
 
     //put the name of the city
-    public void sendkeystoCityInput (String cityName) {
+    public void sendkeystoCityInput (String cityName) throws InterruptedException {
         searchSpan.click();
         searchCityInput.sendKeys(cityName);
+        Thread.sleep(5000);
+        searchCityInput.sendKeys(Keys.ENTER);
+
+
 
 
 

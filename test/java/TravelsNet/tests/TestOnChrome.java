@@ -25,7 +25,7 @@ public abstract class TestOnChrome {
 //    po ponwyzszym tescie wyskakuje blad i okno sie same nie zamyka, rozwiazanie:
     public void tearDown() {
         System.out.println("Wykonuje sie po tescie ");
-        driver.quit();
+//        driver.quit();
     }
 
 }
