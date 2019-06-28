@@ -17,7 +17,9 @@ public class searchHotelTest extends TestOnChrome {
         //I use object the class HomePage using constructor
         HomePage homePage = new HomePage(driver);
         //I initializaed the method - sendkeystoCityInput with parametr - city name
-        homePage.sendkeystoCityInput("Dubai");
+        homePage.setCityHotel("Dubai");
+        homePage.setDateRange("23/12/2019", "30/12/2019");
+
 
 
     }

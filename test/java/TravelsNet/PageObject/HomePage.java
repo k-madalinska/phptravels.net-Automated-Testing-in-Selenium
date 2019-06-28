@@ -16,28 +16,32 @@ public class HomePage {
     @FindBy(xpath = "//div[@id='select2-drop']//input")
     private WebElement searchCityInput;
 
+    @FindBy(name ="checkin")
+    private WebElement checkInInput;
+
+    @FindBy(name ="checkout")
+    private WebElement checkOutInput;
+
+
     //methods
     // creating constructor and in them I use method PageFactory.initElements (to use searchSpan and searchCityInput)
     public HomePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
-
     }
 
 
-
     //put the name of the city
-    public void sendkeystoCityInput (String cityName) throws InterruptedException {
+    public void setCityHotel (String cityName) throws InterruptedException {
         searchSpan.click();
         searchCityInput.sendKeys(cityName);
         Thread.sleep(5000);
         searchCityInput.sendKeys(Keys.ENTER);
+    }
 
-
-
-
-
-
-
-
+    //methods to set the Date range - check in and out
+    public void setDateRange(String checkInDate, String checkOutDate ) {
+        checkInInput.sendKeys(checkInDate);
+        checkOutInput.sendKeys(checkOutDate);
+        checkOutInput.click();
     }
 }
