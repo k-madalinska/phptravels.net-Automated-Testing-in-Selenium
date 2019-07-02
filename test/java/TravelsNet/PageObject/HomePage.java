@@ -16,6 +16,8 @@ public class HomePage {
     private WebElement searchSpan;
 
     @FindBy(xpath = "//div[@id='select2-drop']//input")
+//    @FindBy(xpath="//div[@class='select2-input']")
+    //select2-results-dept-1 select2-result select2-result-selectable
     private WebElement searchCityInput;
 
     @FindBy(name ="checkin")
@@ -37,10 +39,10 @@ public class HomePage {
     private WebElement searchButton;
 
     @FindBy(xpath ="//table[@class = 'bgwhite table table-striped']")
-    private WebElement selectResult;
+    private WebElement resultsTable ;
 
-    @FindBy(xpath="//div[@class='select2-result-label']")
-    private WebElement resultsTable;
+    @FindBy(xpath="//li[@class='select2-results-dept-1 select2-result']")
+    private WebElement selectResult;
 
     //create field SeleniumHelper with variable, use helper with locator
     private SeleniumHelper helper;
@@ -64,6 +66,7 @@ public class HomePage {
         searchCityInput.sendKeys(cityName);
 
         //use helper with locator
+//        By locationLabel = By.xpath("//table[@class = 'bgwhite table table-striped']");
 //        By locationLabel = By.xpath("//div[@class='select2-result-label']");
 //        helper.waitForElementToBeDesplayed(locationLabel);
         //use helper with drvier

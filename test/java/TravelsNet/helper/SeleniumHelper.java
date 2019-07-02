@@ -40,7 +40,7 @@ public class SeleniumHelper {
         wait.withTimeout(Duration.ofSeconds(15))
                 .pollingEvery(Duration.ofMillis(1000))
                 .ignoring(NoSuchElementException.class);
-        wait.until(ExpectedConditions.visibilityOfAllElements(element));
+        wait.until(ExpectedConditions.visibilityOf(element));
     }
 
 
