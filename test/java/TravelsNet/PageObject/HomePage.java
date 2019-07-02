@@ -108,7 +108,6 @@ public class HomePage {
 
 //  I collected hotel's names and checked it
 
-
     public List<String> getHotelNames() {
         List<String> hotelNames = new ArrayList<>();
 //	   Thread.sleep(3000);
